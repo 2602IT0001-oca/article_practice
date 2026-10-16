@@ -1,0 +1,21 @@
+
+<h1>投稿詳細</h1>
+
+Mp>
+<strong>タイトル:</strong>
+<%= @article.title %>
+</p>
+
+<p>
+<strong>投稿内容:</strong>
+<%= @article.content %>
+</p>
+
+<%= link_to"投稿編集へ遷移", edit_article_path(@article) %>
+
+<%= link_to"一覧へ戻る", articles_path %>
+
+<div>
+<%= button_to"削除ボタン", article_path(@article),
+    method: :delete %>
+</div>

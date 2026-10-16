@@ -1,0 +1,21 @@
+
+<h1>投稿一覧</h1>
+
+<%= link_to "新規投稿", new_article_path %>
+
+<table class="articles-table">
+    <thead>
+        <tr>
+            <th>タイトル</th>
+            <th>投稿内容</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @articles.each do |article| %>
+            <tr>
+                <td><%= link_to article.titlem article\path(article) %></td>
+                <td><%= article.content %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

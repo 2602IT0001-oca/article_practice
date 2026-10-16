@@ -1,0 +1,14 @@
+
+<%= form_with model: article do |f| %>
+    <div>
+        <%= f.label :title, "タイトル" %>
+        <%= f.text_field :title %>
+     </div>   
+
+     <div>
+        <%= f.label :content, "投稿内容" %>
+        <%= f.text_area :content %>
+     </div>
+
+     <%= f.submit article.persisted? ? "投稿更新" : "投稿"%>
+<% end %>
