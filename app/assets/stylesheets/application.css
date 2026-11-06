@@ -8,24 +8,24 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
- .flash-success { 
-    color: green;
- }
+.flash-success {
+  color: green;
+}
 
- .flash-delete { 
-    color: red;
- }
+.flash-delete {
+  color: red;
+}
 
- .articles-table {
-    width:80%;
-    border-collapse: collapse;
- }
+.articles-table {
+  width: 80%;
+  border-collapse: collapse;
+}
 
- .articles-table th,
- .articles-table td {
-    border: 1px solid #666;
- }
+.articles-table th,
+.articles-table td {
+  border: 1px solid #666;
+}
 
- .articles-table th:first-child {
-    width: 37.5%;
- }
+.articles-table th:first-child {
+  width: 37.5%;
+}

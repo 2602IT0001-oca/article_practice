@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @articles = Article.all
+    @articles = Article.order(:id)
   end
 
   def show
@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to articles_path, notice: "新規投稿しました。"
+      redirect_to articles_path, notice: "新規投稿しました。", status: :see_other
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to articles_path, notice: "投稿を更新しました。"
+      redirect_to articles_path, notice: "投稿を更新しました。", status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end

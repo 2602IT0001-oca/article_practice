@@ -10,5 +10,5 @@
         <%= f.text_area :content %>
      </div>
 
-     <%= f.submit article.persisted? ? "投稿更新" : "投稿"%>
+     <%= f.submit(article.persisted? ? "投稿更新" : "投稿") %>
 <% end %>
