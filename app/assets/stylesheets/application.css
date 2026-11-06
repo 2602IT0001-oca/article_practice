@@ -9,9 +9,24 @@
  * Consider organizing styles into separate files for maintainability.
  */
  .flash-success { 
-    color: #166534
+    color: green;
  }
 
  .flash-delete { 
-    color: #b91c1c
+    color: red;
+ }
+
+ .articles-table {
+    width:800px;
+    max-width: 100%;
+    border-collapse: collapse;
+ }
+
+ .articles-table th,
+ .articles-table td {
+    border: 1px solid #666;
+ }
+
+ .articles-table th:first-child {
+    width: 37.5%;
  }

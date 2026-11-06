@@ -10,12 +10,11 @@
 <strong>投稿内容:</strong>
 <%= @article.content %>
 </p>
-
-<%= link_to"投稿編集へ遷移", edit_article_path(@article) %>
-
-<%= link_to"一覧へ戻る", articles_path %>
-
 <div>
-<%= button_to"削除ボタン", article_path(@article),
-    method: :delete %>
+    <%= link_to"投稿編集へ遷移", edit_article_path(@article) %>
+    |
+    <%= link_to"一覧へ戻る", articles_path %>
 </div>
+
+
+<%= button_to"削除ボタン", article_path(@article),method: :delete %>
